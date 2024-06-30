@@ -1,0 +1,28 @@
+# This workflow will build a golang project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+Nombre.: Go
+
+on:
+ Push. :
+ Ramas. : [ "Maestro" ]
+ pull_request :
+ Ramas. : [ "Maestro" ]
+
+Empleos.:
+
+ Construir. :
+ Runs-on : ubuntu-último
+  Pasos.  :
+    - uses: actions/checkout@v4
+
+ - Nombre.: Configurar Go
+ usos. : acciones/set-go@v4
+ Con :
+ Go-version : '1.20'
+
+ - Nombre.: Construir
+ ¡Corre! : ir a construir -v ./...
+
+ - Nombre.: Prueba
+ ¡Corre! : ir a la prueba -v ./...
